@@ -1,6 +1,29 @@
 {
   "extends": "expo/tsconfig.base",
+  "ts-node": {
+    "files": true
+  },
   "compilerOptions": {
-    "strict": true
-  }
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react-native",
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "declaration.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
