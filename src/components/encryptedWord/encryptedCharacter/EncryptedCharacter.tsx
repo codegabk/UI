@@ -24,6 +24,13 @@ const EncryptedCharacter = ({ item, animationRef }: IEncryptedCharacterProps) =>
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
+  const text = useSharedValue(item);
+
+  const initialArray = generateCharacterArray();
+  const initialArrLength = initialArray.length;
+
+  const charactersArr = [...initialArray];
+
   const getRandomCharacter = () => {
     const randomIndex = Math.floor(Math.random() * initialArrLength);
     // We don't want to have repeating characters e.g.:
@@ -31,13 +38,6 @@ const EncryptedCharacter = ({ item, animationRef }: IEncryptedCharacterProps) =>
     // index = 1 => 'A' ❌ instead: index = 1 => 'G' ✅
     return charactersArr.splice(randomIndex, 1)[0];
   };
-
-  const text = useSharedValue(item);
-
-  const initialArray = generateCharacterArray();
-  const initialArrLength = initialArray.length;
-
-  const charactersArr = [...initialArray];
 
   const animate = (show: boolean) => {
     const randomDelay = generateRandomNumber(10, 18);
