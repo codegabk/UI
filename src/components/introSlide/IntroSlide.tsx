@@ -116,8 +116,8 @@ const IntroSlide = ({ data }: IntroSlideProps) => {
             return (
               <Dot
                 key={id}
-                offset={scrollSV}
                 index={index}
+                offset={scrollSV}
                 backgroundColor={'#FFFFFF'}
                 containerSize={width}
               />

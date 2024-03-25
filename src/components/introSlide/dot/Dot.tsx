@@ -13,7 +13,7 @@ import styles from './Dot.styles';
 export interface DotProps {
   index: number;
   containerSize?: number;
-  dataLength: number;
+  dataLength?: number;
   backgroundColor: string;
   interpolateOnWidth?: boolean;
   offset: SharedValue<number>;

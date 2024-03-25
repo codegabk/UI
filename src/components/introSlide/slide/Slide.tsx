@@ -9,7 +9,7 @@ import { width } from '@/utils/sizing';
 
 import styles from './Slide.styles';
 
-export interface SlideProps extends DotProps {
+export interface SlideProps extends Omit<DotProps, 'dataLength'> {
   title: string;
   subtitle: string;
   asset: AnimationObject;
