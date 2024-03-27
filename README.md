@@ -2,7 +2,7 @@
 
 Hey React Native Developers! 👋
 
-Welcome to UI! This repository is all about showcasing some cool animations implemented in React Native. If you're passionate about creating stunning user interfaces and delightful user experiences, you're in the right place!
+Welcome to UI! This repository is all about showcasing some cool animations implemented in React Native. If you're passionate about creating stunning and delightful user experiences, you're in the right place!
 
 ## About the Project
 
