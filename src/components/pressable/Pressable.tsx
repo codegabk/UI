@@ -24,6 +24,7 @@ interface PressableProps {
   onPressOut?: () => void;
   isLongPress?: boolean;
   noAnimation?: boolean;
+  withScale?: boolean;
   gesture?: GestureEnum;
 }
 
@@ -31,6 +32,7 @@ const Pressable = ({
   gesture,
   children,
   noAnimation,
+  withScale = true,
   onPressIn: onPressInProp,
   onPressOut: onPressOutProp,
 }: PressableProps) => {
@@ -52,7 +54,9 @@ const Pressable = ({
 
     const commonGesture = gestureFunction()
       .onBegin(() => {
-        animatedSV.value = 0.96;
+        if (withScale) {
+          animatedSV.value = 0.96;
+        }
       })
       .onStart(async () => {
         onPressInProp?.();
