@@ -13,6 +13,7 @@ import Pressable from '@/components/pressable/Pressable';
 import styles from './TransferCards.styles';
 
 import { ChevronDownIcon, DollarIcon, EuroIcon } from '../../../assets/icons';
+import { width } from '@/utils/sizing';
 
 const TransferCards = () => {
   const progress = useSharedValue(0);
@@ -20,36 +21,32 @@ const TransferCards = () => {
   const topAmount = ' $20';
   const bottomAmount = ' €22.61';
 
-  const cardHeightOutputArray = [180, 80];
-  const amountScaleOutputArray = [1, 0.7];
-  const opacityOutputArray = [1, 0];
-
   const topCardAnimatedStyle = useAnimatedStyle(() => ({
-    height: interpolate(progress.value, [0, 1], cardHeightOutputArray),
+    height: interpolate(progress.value, [0, 1], [180, 80]),
   }));
 
   const bottomCardAnimatedStyle = useAnimatedStyle(() => ({
-    height: interpolate(progress.value, [0, 1], cardHeightOutputArray.reverse()),
+    height: interpolate(progress.value, [0, 1], [80, 180]),
   }));
 
   const topAmountAnimatedStyle = useAnimatedStyle(() => ({
     top: interpolate(progress.value, [0, 1], [0, -75]),
-    start: interpolate(progress.value, [0, 1], [0, 140 - topAmount.length * 3]),
-    transform: [{ scale: interpolate(progress.value, [0, 1], amountScaleOutputArray) }],
+    start: interpolate(progress.value, [0, 1], [0, width / 3 - topAmount.length * 3]),
+    transform: [{ scale: interpolate(progress.value, [0, 1], [1, 0.7]) }],
   }));
 
   const bottomAmountAnimatedStyle = useAnimatedStyle(() => ({
     top: interpolate(progress.value, [0, 1], [-75, 0]),
-    start: interpolate(progress.value, [0, 1], [140 - bottomAmount.length * 3, 0]),
-    transform: [{ scale: interpolate(progress.value, [0, 1], amountScaleOutputArray.reverse()) }],
+    start: interpolate(progress.value, [0, 1], [width / 3 - bottomAmount.length * 3, 0]),
+    transform: [{ scale: interpolate(progress.value, [0, 1], [0.7, 1]) }],
   }));
 
   const topOpacityAnimatedStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(progress.value, [0, 0.2], opacityOutputArray),
+    opacity: interpolate(progress.value, [0, 0.2], [1, 0]),
   }));
 
   const bottomOpacityAnimatedStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(progress.value, [0.8, 1], opacityOutputArray.reverse()),
+    opacity: interpolate(progress.value, [0.8, 1], [0, 1]),
   }));
 
   const onTopCardPress = () => {
