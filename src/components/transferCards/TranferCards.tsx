@@ -10,10 +10,11 @@ import { Text, View } from 'react-native';
 import Icon from '@/components/icon/Icon';
 import Pressable from '@/components/pressable/Pressable';
 
+import { width } from '@/utils/sizing';
+
 import styles from './TransferCards.styles';
 
 import { ChevronDownIcon, DollarIcon, EuroIcon } from '../../../assets/icons';
-import { width } from '@/utils/sizing';
 
 const TransferCards = () => {
   const progress = useSharedValue(0);
