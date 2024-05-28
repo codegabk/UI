@@ -20,32 +20,36 @@ const TransferCards = () => {
   const topAmount = ' $20';
   const bottomAmount = ' €22.61';
 
+  const cardHeightOutputArray = [180, 80];
+  const amountScaleOutputArray = [1, 0.7];
+  const opacityOutputArray = [1, 0];
+
   const topCardAnimatedStyle = useAnimatedStyle(() => ({
-    height: interpolate(progress.value, [0, 1], [180, 80]),
+    height: interpolate(progress.value, [0, 1], cardHeightOutputArray),
   }));
 
   const bottomCardAnimatedStyle = useAnimatedStyle(() => ({
-    height: interpolate(progress.value, [0, 1], [80, 180]),
+    height: interpolate(progress.value, [0, 1], cardHeightOutputArray.reverse()),
   }));
 
   const topAmountAnimatedStyle = useAnimatedStyle(() => ({
     top: interpolate(progress.value, [0, 1], [0, -75]),
     start: interpolate(progress.value, [0, 1], [0, 140 - topAmount.length * 3]),
-    transform: [{ scale: interpolate(progress.value, [0, 1], [1, 0.7]) }],
+    transform: [{ scale: interpolate(progress.value, [0, 1], amountScaleOutputArray) }],
   }));
 
   const bottomAmountAnimatedStyle = useAnimatedStyle(() => ({
     top: interpolate(progress.value, [0, 1], [-75, 0]),
     start: interpolate(progress.value, [0, 1], [140 - bottomAmount.length * 3, 0]),
-    transform: [{ scale: interpolate(progress.value, [0, 1], [0.7, 1]) }],
+    transform: [{ scale: interpolate(progress.value, [0, 1], amountScaleOutputArray.reverse()) }],
   }));
 
   const topOpacityAnimatedStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(progress.value, [0, 0.2], [1, 0]),
+    opacity: interpolate(progress.value, [0, 0.2], opacityOutputArray),
   }));
 
   const bottomOpacityAnimatedStyle = useAnimatedStyle(() => ({
-    opacity: interpolate(progress.value, [0.8, 1], [0, 1]),
+    opacity: interpolate(progress.value, [0.8, 1], opacityOutputArray.reverse()),
   }));
 
   const onTopCardPress = () => {
