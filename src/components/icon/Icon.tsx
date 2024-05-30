@@ -3,7 +3,7 @@ import React from 'react';
 interface IconProps {
   Asset: React.ElementType;
   fill: string;
-  width: number;
+  width?: number;
   height?: number | string;
   style?: { color: string };
 }
