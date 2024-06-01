@@ -52,7 +52,7 @@ const ScrollWheel = () => {
   const cardLength = cards.length;
 
   const onScroll = useAnimatedScrollHandler((event) => {
-    scrollX.value = clamp(event.contentOffset.x / 100, 0, cardLength - 1);
+    scrollX.value = clamp(event.contentOffset.x / width, 0, cardLength - 1);
   });
 
   const startColors = cards.map(({ startColor }) => startColor);
@@ -95,11 +95,11 @@ const ScrollWheel = () => {
       </View>
       <Animated.ScrollView
         horizontal
-        snapToInterval={100}
+        snapToInterval={width}
         onScroll={onScroll}
         scrollEventThrottle={16}
         style={styles.scrollView}>
-        <View style={{ width: cardLength * 210 }} />
+        <View style={{ width: cardLength * width }} />
       </Animated.ScrollView>
       <StatusBar style="auto" />
     </>
