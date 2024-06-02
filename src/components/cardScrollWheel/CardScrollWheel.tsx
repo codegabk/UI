@@ -11,11 +11,11 @@ import Animated, {
 } from 'react-native-reanimated';
 import { Canvas, interpolateColors, LinearGradient, Rect, vec } from '@shopify/react-native-skia';
 
-import Card from '@/components/scrollWheel/card/Card';
+import Card from '@/components/cardScrollWheel/card/Card';
 
 import { height, width } from '@/utils/sizing';
 
-import styles from './ScrollWheel.styles';
+import styles from './CardScrollWheel.styles';
 
 import { GoldExpressCard, GrayExpressCard, GreenExpressCard } from '../../../assets';
 
@@ -46,7 +46,7 @@ const cards = [
   },
 ];
 
-const ScrollWheel = () => {
+const CardScrollWheel = () => {
   const scrollX = useSharedValue(0);
 
   const cardLength = cards.length;
@@ -106,4 +106,4 @@ const ScrollWheel = () => {
   );
 };
 
-export default ScrollWheel;
+export default CardScrollWheel;
