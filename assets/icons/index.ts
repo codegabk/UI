@@ -17,6 +17,8 @@ import ScreenCastIcon from './screencast.svg';
 import ArrowRightIcon from './arrow-right.svg';
 import ChevronDownIcon from './chevron-down.svg';
 import SkipForwardIcon from './skip-forward.svg';
+import ArrowLeftLucide from './arrow-left-lucide.svg';
+import ArrowRightLucide from './arrow-right-lucide.svg';
 import DotsThreeVerticalIcon from './dots-three-vertical.svg';
 
 export {
@@ -39,5 +41,7 @@ export {
   ScreenCastIcon,
   ChevronDownIcon,
   SkipForwardIcon,
+  ArrowLeftLucide,
+  ArrowRightLucide,
   DotsThreeVerticalIcon,
 };
