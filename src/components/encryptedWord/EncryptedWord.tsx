@@ -41,7 +41,7 @@ const EncryptedWord = () => {
       ))}
       <Pressable onPressOut={onPress}>
         <View style={styles.icon}>
-          <Icon Asset={Asset} fill={'#FFFFFF'} />
+          <Icon Asset={Asset} fill={'#FFFFFF'} height={28} />
         </View>
       </Pressable>
     </View>

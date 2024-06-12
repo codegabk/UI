@@ -51,4 +51,27 @@ const skills = [
   { id: 49, label: 'Fundraising' },
 ];
 
-export { skills };
+const cuisines = [
+  { id: 0, label: 'Italian' },
+  { id: 1, label: 'Chinese' },
+  { id: 2, label: 'Mexican' },
+  { id: 3, label: 'Indian' },
+  { id: 4, label: 'French' },
+  { id: 5, label: 'Japanese' },
+  { id: 6, label: 'Thai' },
+  { id: 7, label: 'Greek' },
+  { id: 8, label: 'Spanish' },
+  { id: 9, label: 'Korean' },
+  { id: 10, label: 'Vietnamese' },
+  { id: 11, label: 'Turkish' },
+  { id: 12, label: 'Moroccan' },
+  { id: 13, label: 'Lebanese' },
+  { id: 14, label: 'Ethiopian' },
+  { id: 15, label: 'Brazilian' },
+  { id: 16, label: 'Argentinian' },
+  { id: 17, label: 'Caribbean' },
+  { id: 18, label: 'Peruvian' },
+  { id: 19, label: 'Russian' },
+];
+
+export { skills, cuisines };
