@@ -53,7 +53,7 @@ const SimplePlayer = () => {
   }));
 
   const blurProps = useAnimatedProps(() => ({
-    intensity: interpolate(progress.value, [0, 0.5, 1], [0, 10, 0]),
+    intensity: interpolate(progress.value, [0, 0.5, 1], [0, 40, 0]),
   }));
 
   const onPressIn = () => {
