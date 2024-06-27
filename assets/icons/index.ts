@@ -1,4 +1,5 @@
 import EyeIcon from './eye.svg';
+import SunIcon from './sun.svg';
 import PlusIcon from './plus.svg';
 import SwapIcon from './swap.svg';
 import CopyIcon from './copy.svg';
@@ -23,6 +24,7 @@ import DotsThreeVerticalIcon from './dots-three-vertical.svg';
 
 export {
   EyeIcon,
+  SunIcon,
   PlusIcon,
   PlayIcon,
   CopyIcon,
