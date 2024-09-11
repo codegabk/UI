@@ -74,4 +74,27 @@ const cuisines = [
   { id: 19, label: 'Russian' },
 ];
 
-export { skills, cuisines };
+const exercises = [
+  { id: 0, label: 'Push-Up' },
+  { id: 1, label: 'Bench Press' },
+  { id: 2, label: 'Squat' },
+  { id: 3, label: 'Deadlift' },
+  { id: 4, label: 'Pull-Up' },
+  { id: 5, label: 'Dumbbell Curl' },
+  { id: 6, label: 'Shoulder Press' },
+  { id: 7, label: 'Tricep Dip' },
+  { id: 8, label: 'Leg Press' },
+  { id: 9, label: 'Lunges' },
+  { id: 10, label: 'Plank' },
+  { id: 11, label: 'Russian Twist' },
+  { id: 12, label: 'Lat Pulldown' },
+  { id: 13, label: 'Leg Raise' },
+  { id: 14, label: 'Bent-Over Row' },
+  { id: 15, label: 'Cable Fly' },
+  { id: 16, label: 'Bicep Curl' },
+  { id: 17, label: 'Kettlebell Swing' },
+  { id: 18, label: 'Hip Thrust' },
+  { id: 19, label: 'Overhead Press' },
+];
+
+export { skills, cuisines, exercises };
