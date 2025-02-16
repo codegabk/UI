@@ -30,7 +30,9 @@ const ElevatedText = ({
   return (
     <View style={[{ flexDirection: 'row', flexWrap: 'wrap' }, style]}>
       {words.map((word, wordIndex) => (
-        <View key={`${word.join('')}`} style={{ flexDirection: 'row', marginRight: 6 }}>
+        <View
+          key={`${word.join('')}-${wordIndex}`}
+          style={{ flexDirection: 'row', marginRight: 6 }}>
           {word.map((letter, letterIndex) => {
             const index =
               words.slice(0, wordIndex).reduce((acc, w) => acc + w.length, 0) + letterIndex;
