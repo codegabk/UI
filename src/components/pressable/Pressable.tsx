@@ -23,6 +23,7 @@ interface PressableProps {
   onPressIn?: () => void;
   onPressOut?: () => void;
   isLongPress?: boolean;
+  disabled?: boolean;
   noAnimation?: boolean;
   withScale?: boolean;
   gesture?: GestureEnum;
@@ -32,6 +33,7 @@ const Pressable = ({
   gesture,
   children,
   noAnimation,
+  disabled = false,
   withScale = true,
   onPressIn: onPressInProp,
   onPressOut: onPressOutProp,
@@ -67,7 +69,8 @@ const Pressable = ({
       })
       .onFinalize(() => {
         animatedSV.value = 1;
-      });
+      })
+      .enabled(!disabled);
 
     const hasLongPressConfigs =
       LongPressGestureConfig.minDuration in commonGesture &&
